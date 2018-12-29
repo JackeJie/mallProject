@@ -42,7 +42,7 @@
 		
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.wd.webservice.dao"></property>
+		<property name="basePackage" value="com.mallProject.demo.dao"></property>
 	</bean>
 	
 	<!--
@@ -53,7 +53,7 @@
 	 -->
 	 
 	 
-   <context:component-scan base-package="com.wd.webservice.service.impl"></context:component-scan>
+   <context:component-scan base-package="com.mallProject.demo.service.impl"></context:component-scan>
 	 
     
 	

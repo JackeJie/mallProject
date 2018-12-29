@@ -1,5 +1,7 @@
 package com.mallProject.demo.dao;
 
+import java.util.List;
+
 import com.mallProject.demo.entity.BManager;
 
 public interface BManagerMapper {
@@ -14,4 +16,6 @@ public interface BManagerMapper {
     int updateByPrimaryKeySelective(BManager record);
 
     int updateByPrimaryKey(BManager record);
+    
+    List<BManager> getBManagerAll();
 }

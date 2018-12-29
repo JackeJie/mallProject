@@ -1,7 +1,19 @@
 package com.mallProject.demo.entity;
 
-public class BShoppingcart {
-    private Integer sid;
+import java.io.Serializable;
+
+/**
+ * 
+ * @author wangj  ¹ºÎï³µ
+ *
+ */
+public class BShoppingcart implements Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4804946577590317460L;
+
+	private Integer sid;
 
     private Integer uid;
 

@@ -1,7 +1,19 @@
 package com.mallProject.demo.entity;
 
-public class BManager {
-    private Integer aid;
+import java.io.Serializable;
+
+/**
+ * 
+ * @author wangj  π‹¿Ì±Ì
+ *
+ */
+public class BManager implements Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -3918002002329018162L;
+
+	private Integer aid;
 
     private String aname;
 

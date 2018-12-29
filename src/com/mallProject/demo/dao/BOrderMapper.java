@@ -1,5 +1,7 @@
 package com.mallProject.demo.dao;
 
+import java.util.List;
+
 import com.mallProject.demo.entity.BOrder;
 
 public interface BOrderMapper {
@@ -14,4 +16,6 @@ public interface BOrderMapper {
     int updateByPrimaryKeySelective(BOrder record);
 
     int updateByPrimaryKey(BOrder record);
+    
+    List<BOrder> getBOrderAll();
 }

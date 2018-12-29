@@ -1,9 +1,19 @@
 package com.mallProject.demo.entity;
 
+import java.io.Serializable;
 import java.util.Date;
+/**
+ * 
+ * @author wangj  用户信息表
+ *
+ */
+public class BUser implements Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 8846526684872424988L;
 
-public class BUser {
-    private Integer uid;
+	private Integer uid;
 
     private String uname;
 

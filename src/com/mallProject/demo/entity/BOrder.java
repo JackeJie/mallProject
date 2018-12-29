@@ -1,9 +1,19 @@
 package com.mallProject.demo.entity;
 
+import java.io.Serializable;
 import java.util.Date;
+/**
+ * 
+ * @author wangj  ∂©µ•¿‡
+ *
+ */
+public class BOrder implements  Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4207337258226662374L;
 
-public class BOrder {
-    private Integer oid;
+	private Integer oid;
 
     private Integer uid;
 

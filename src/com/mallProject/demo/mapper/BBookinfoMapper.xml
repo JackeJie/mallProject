@@ -7,12 +7,13 @@
     <result column="bookName" property="bookname" jdbcType="VARCHAR" />
     <result column="bookAuthor" property="bookauthor" jdbcType="VARCHAR" />
     <result column="bookMoney" property="bookmoney" jdbcType="REAL" />
+    <result column="booknote" property="booknote" jdbcType="VARCHAR" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.mallProject.demo.entity.BBookinfo" extends="BaseResultMap" >
     <result column="bookNote" property="booknote" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    bookId, bookTypeid, bookName, bookAuthor, bookMoney
+    bookId, bookTypeid, bookName, bookAuthor, bookMoney, booknote
   </sql>
   <sql id="Blob_Column_List" >
     bookNote
@@ -118,4 +119,9 @@
       bookMoney = #{bookmoney,jdbcType=REAL}
     where bookId = #{bookid,jdbcType=INTEGER}
   </update>
+  
+  
+  <select id="getBBookinfoAll" resultMap="BaseResultMap" >
+    select <include refid="Base_Column_List"></include>  from b_bookinfo
+  </select>
 </mapper>

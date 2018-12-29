@@ -1,5 +1,7 @@
 package com.mallProject.demo.dao;
 
+import java.util.List;
+
 import com.mallProject.demo.entity.BShoppingcart;
 
 public interface BShoppingcartMapper {
@@ -14,4 +16,7 @@ public interface BShoppingcartMapper {
     int updateByPrimaryKeySelective(BShoppingcart record);
 
     int updateByPrimaryKey(BShoppingcart record);
+    
+    
+    List<BShoppingcart>  getBShoppingcartAll();
 }

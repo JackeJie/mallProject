@@ -21,7 +21,7 @@
 
 
  <!-- 添加扫描注解的配置(控制器) -->
-<context:component-scan base-package="com.wd.webservice.controller" />
+<context:component-scan base-package="com.mallProject.demo.controller" />
 
 <!-- 添加支持返回java对象自动转换为json -->
  <mvc:annotation-driven/> <!-- 增加转换器 --> 

@@ -1,8 +1,11 @@
 package com.mallProject.demo.dao;
 
+import java.util.List;
+
 import com.mallProject.demo.entity.BBookinfo;
 
 public interface BBookinfoMapper {
+	
     int deleteByPrimaryKey(Integer bookid);
 
     int insert(BBookinfo record);
@@ -16,4 +19,6 @@ public interface BBookinfoMapper {
     int updateByPrimaryKeyWithBLOBs(BBookinfo record);
 
     int updateByPrimaryKey(BBookinfo record);
+    
+    List<BBookinfo> getBBookinfoAll();
 }

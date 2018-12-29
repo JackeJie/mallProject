@@ -1,5 +1,7 @@
 package com.mallProject.demo.dao;
 
+import java.util.List;
+
 import com.mallProject.demo.entity.BUser;
 
 public interface BUserMapper {
@@ -14,4 +16,8 @@ public interface BUserMapper {
     int updateByPrimaryKeySelective(BUser record);
 
     int updateByPrimaryKey(BUser record);
+    
+    List<BUser>  getBUserAll();
+    
+    
 }

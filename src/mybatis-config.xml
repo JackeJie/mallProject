@@ -8,12 +8,13 @@
 	<mappers>
 		
 		
-		<mapper resource="com/wd/webservice/mapper/TbDicDepartmentMapper.xml"/>
-		<mapper resource="com/wd/webservice/mapper/TbDicDoctorMapper.xml"/>
-		<mapper resource="com/wd/webservice/mapper/TbDicHospitalMapper.xml"/>
-		<mapper resource="com/wd/webservice/mapper/TbDicOutpatinfoMapper.xml"/>
-		<mapper resource="com/wd/webservice/mapper/TbDicProfessionMapper.xml"/>
-		<mapper resource="com/wd/webservice/mapper/TbDicRuleMapper.xml"/>
+		<mapper resource="com/mallProject/demo/mapper/BBookinfoMapper.xml"/>
+		<mapper resource="com/mallProject/demo/mapper/BManagerMapper.xml"/>
+		<mapper resource="com/mallProject/demo/mapper/BOrderMapper.xml"/>
+		<mapper resource="com/mallProject/demo/mapper/BShoppingcartMapper.xml"/>
+		<mapper resource="com/mallProject/demo/mapper/BUserMapper.xml"/>
+		
+		
 	</mappers>
 	
 

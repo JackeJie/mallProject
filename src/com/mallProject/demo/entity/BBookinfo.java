@@ -1,7 +1,19 @@
 package com.mallProject.demo.entity;
 
-public class BBookinfo {
-    private Integer bookid;
+import java.io.Serializable;
+
+/**
+ * 
+ * @author wangj  
+ *
+ */
+public class BBookinfo implements Serializable {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -3848507244908476469L;
+
+	private Integer bookid;
 
     private Integer booktypeid;
 
@@ -53,11 +65,19 @@ public class BBookinfo {
         this.bookmoney = bookmoney;
     }
 
-    public String getBooknote() {
+    @Override
+	public String toString() {
+		return "BBookinfo [bookid=" + bookid + ", booktypeid=" + booktypeid + ", bookname=" + bookname + ", bookauthor="
+				+ bookauthor + ", bookmoney=" + bookmoney + ", booknote=" + booknote + "]";
+	}
+
+	public String getBooknote() {
         return booknote;
     }
 
     public void setBooknote(String booknote) {
         this.booknote = booknote == null ? null : booknote.trim();
     }
+    
+    
 }
