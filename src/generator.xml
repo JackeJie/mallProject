@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <classPathEntry location="D:\Program File\eclipse2018\mallProject\WebContent\WEB-INF\lib\mysql-connector-java-3.0.16-ga-bin.jar" />
+
+  <context id="Mysql2Tables" targetRuntime="MyBatis3">
+  
+  <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+  
+  
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+   connectionURL="jdbc:mysql://localhost/mangershopping"
+   userId="root"
+    password="123456">
+    </jdbcConnection>
+
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.mallProject.demo.entity" targetProject="src">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator> 
+    <sqlMapGenerator targetPackage="com.mallProject.demo.mapper"  targetProject="src">
+      <property name="enableSubPackages" value="false" />
+    </sqlMapGenerator>
+
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.mallProject.demo.dao"  targetProject="src">
+      <property name="enableSubPackages" value="false" />
+    </javaClientGenerator>
+    
+
+        
+    <table tableName="b_user" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+    </table>
+    
+     <table tableName="b_shoppingcart" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+    </table>
+    
+     <table tableName="b_order" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+    </table>
+    
+     <table tableName="b_manager" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+    </table>
+    
+    <table tableName="b_bookinfo" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+    </table>
+    
+    
+    
+     
+    
+    
+  </context>
+</generatorConfiguration>

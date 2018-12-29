@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mallProject.demo.dao.BBookinfoMapper" >
+  <resultMap id="BaseResultMap" type="com.mallProject.demo.entity.BBookinfo" >
+    <id column="bookId" property="bookid" jdbcType="INTEGER" />
+    <result column="bookTypeid" property="booktypeid" jdbcType="INTEGER" />
+    <result column="bookName" property="bookname" jdbcType="VARCHAR" />
+    <result column="bookAuthor" property="bookauthor" jdbcType="VARCHAR" />
+    <result column="bookMoney" property="bookmoney" jdbcType="REAL" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.mallProject.demo.entity.BBookinfo" extends="BaseResultMap" >
+    <result column="bookNote" property="booknote" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    bookId, bookTypeid, bookName, bookAuthor, bookMoney
+  </sql>
+  <sql id="Blob_Column_List" >
+    bookNote
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from b_bookinfo
+    where bookId = #{bookid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from b_bookinfo
+    where bookId = #{bookid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mallProject.demo.entity.BBookinfo" >
+    insert into b_bookinfo (bookId, bookTypeid, bookName, 
+      bookAuthor, bookMoney, bookNote
+      )
+    values (#{bookid,jdbcType=INTEGER}, #{booktypeid,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, 
+      #{bookauthor,jdbcType=VARCHAR}, #{bookmoney,jdbcType=REAL}, #{booknote,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.mallProject.demo.entity.BBookinfo" >
+    insert into b_bookinfo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="bookid != null" >
+        bookId,
+      </if>
+      <if test="booktypeid != null" >
+        bookTypeid,
+      </if>
+      <if test="bookname != null" >
+        bookName,
+      </if>
+      <if test="bookauthor != null" >
+        bookAuthor,
+      </if>
+      <if test="bookmoney != null" >
+        bookMoney,
+      </if>
+      <if test="booknote != null" >
+        bookNote,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="bookid != null" >
+        #{bookid,jdbcType=INTEGER},
+      </if>
+      <if test="booktypeid != null" >
+        #{booktypeid,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null" >
+        #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="bookauthor != null" >
+        #{bookauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="bookmoney != null" >
+        #{bookmoney,jdbcType=REAL},
+      </if>
+      <if test="booknote != null" >
+        #{booknote,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mallProject.demo.entity.BBookinfo" >
+    update b_bookinfo
+    <set >
+      <if test="booktypeid != null" >
+        bookTypeid = #{booktypeid,jdbcType=INTEGER},
+      </if>
+      <if test="bookname != null" >
+        bookName = #{bookname,jdbcType=VARCHAR},
+      </if>
+      <if test="bookauthor != null" >
+        bookAuthor = #{bookauthor,jdbcType=VARCHAR},
+      </if>
+      <if test="bookmoney != null" >
+        bookMoney = #{bookmoney,jdbcType=REAL},
+      </if>
+      <if test="booknote != null" >
+        bookNote = #{booknote,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where bookId = #{bookid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.mallProject.demo.entity.BBookinfo" >
+    update b_bookinfo
+    set bookTypeid = #{booktypeid,jdbcType=INTEGER},
+      bookName = #{bookname,jdbcType=VARCHAR},
+      bookAuthor = #{bookauthor,jdbcType=VARCHAR},
+      bookMoney = #{bookmoney,jdbcType=REAL},
+      bookNote = #{booknote,jdbcType=LONGVARCHAR}
+    where bookId = #{bookid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mallProject.demo.entity.BBookinfo" >
+    update b_bookinfo
+    set bookTypeid = #{booktypeid,jdbcType=INTEGER},
+      bookName = #{bookname,jdbcType=VARCHAR},
+      bookAuthor = #{bookauthor,jdbcType=VARCHAR},
+      bookMoney = #{bookmoney,jdbcType=REAL}
+    where bookId = #{bookid,jdbcType=INTEGER}
+  </update>
+</mapper>
