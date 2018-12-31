@@ -46,7 +46,7 @@ public class ResponseMessage<T> implements Serializable {
 	 * @return    查询成功后返回数据
 	 */
 	public static ResponseMessage<Object>  returnResponseMessageSucess(int code,String msg,Object data){
-		return new ResponseMessage<>(code, msg,data);
+		return new ResponseMessage<>(ResponEnum.SUCESS.getCode(), ResponEnum.SUCESS.getMsg(),data);
 	}
 	/**
 	 * 
@@ -60,7 +60,7 @@ public class ResponseMessage<T> implements Serializable {
 
 	@Override
 	public String toString() {
-		return "ResponseMessage [code=" + code + ", msg=" + msg + ", data=" + data + "]";
+		return "{code:" + code + ", msg:" + msg + ", data:" + data + "}";
 	}
 	
 	

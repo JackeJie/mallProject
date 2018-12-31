@@ -1,0 +1,15 @@
+   js操作总结
+
+#返回上一页代码
+    window.history.back(-1);
+    
+在窗体中打开地址
+   window.location.href="跳转的地址";
+   
+在新窗体中打开页面用
+		window.open("跳转的页面地址")
+		
+给input输入框赋值		
+$("#count").val('1');
+$("#count").attr("value","123")
+
