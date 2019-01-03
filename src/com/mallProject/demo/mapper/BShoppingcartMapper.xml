@@ -103,4 +103,13 @@
       sPaymethod = #{spaymethod,jdbcType=VARCHAR}
     where sId = #{sid,jdbcType=INTEGER}
   </update>
+  
+  <select id="getCount" resultType="java.lang.Integer" >
+    select count(1)  from b_shoppingcart
+  </select>
+  
+  <select id="getCountUserShoppingCart" resultType="java.lang.Integer">
+  	select count(1) from b_shoppingcart where uId = #{uid,jdbcType=INTEGER}
+  </select>
+  
 </mapper>

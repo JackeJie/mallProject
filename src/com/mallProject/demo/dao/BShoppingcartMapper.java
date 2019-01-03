@@ -19,4 +19,8 @@ public interface BShoppingcartMapper {
     
     
     List<BShoppingcart>  getBShoppingcartAll();
+    
+    int getCount();
+    
+    int getCountUserShoppingCart(Integer id);
 }

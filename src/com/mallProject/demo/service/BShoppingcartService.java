@@ -28,5 +28,18 @@ public interface BShoppingcartService {
 	 * @return  查询所有商品
 	 */
 	List<BShoppingcart> getBShoppingcartAll();
+	
+	/**
+	 * 
+	 * @param id
+	 * @return   查询购物车商品数量
+	 */
+	 int getCount();
+	 /**
+	  *    
+	  * @param id  根据用户id查询用户购物车   后期给用户加账号师使用
+	  * @return
+	  */
+	int getCountUserShoppingCart(Integer id);
 
 }

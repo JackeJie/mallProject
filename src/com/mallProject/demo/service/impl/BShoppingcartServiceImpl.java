@@ -40,4 +40,16 @@ public class BShoppingcartServiceImpl implements BShoppingcartService {
 		return bShoppingcartMapper.getBShoppingcartAll();
 	}
 
+	@Override
+	public int getCount() {
+		
+		return bShoppingcartMapper.getCount();
+	}
+
+	@Override
+	public int getCountUserShoppingCart(Integer id) {
+		// TODO Auto-generated method stub
+		return bShoppingcartMapper.getCountUserShoppingCart(id);
+	}
+
 }

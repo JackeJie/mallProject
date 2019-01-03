@@ -10,29 +10,7 @@
 <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
    $(document).ready(function (){
-	  // alert(1);
-			// 2、$.get()方式，简单的 GET 请求功能以取代复杂 $.ajax
-	    //   $.get("getAll.s",null,function(data){ //param为参数---键值对方式
-	   //  	   alert(data.msg)
-	   //  	   $("#info").html("");//清空info内容
-	  //   	   $.each(data.data, function(i, item) {
-		//             $("#info").append(
-		//                    "<tr>"+
-		// //                    "<td>"+   item.bookid +"</td>"+
-		 //                   "<td>"+   item.booktypeid +"</td>"+
-		 //                   "<td>"+   item.bookname +"</td>"+
-		  //                  "<td>"+   item.bookauthor +"</td>"+
-		                //                   "<td>"+   item.bookmoney +"</td>"+
-		   //                 "<td>"+   item.booknote +"</td>"+
-		   //                 "<td class='dd'   >"+   "查看" +"</td>"+
-		    //                "</tr>"
-		     //               );
-		   //      });
-	     //   })
-        
-   
-   
-   
+
    })
    
    
@@ -41,6 +19,10 @@
 </script>
 </head>
 <body>
+	<div>
+		<jsp:include page="/resouce/head.jsp"></jsp:include>
+
+	</div>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>

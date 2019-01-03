@@ -13,3 +13,43 @@
 $("#count").val('1');
 $("#count").attr("value","123")
 
+解析json数据格式
+2、$.get()方式，简单的 GET 请求功能以取代复杂 $.ajax
+ $.get("getAll.s",null,function(data){ //param为参数---键值对方式
+ 
+ $.each(data.data, function(i, item) 
+ 
+ 键盘enter事件       idcardNo 为输入框id
+ 
+  $("#idcardNo").keydown(function(e){
+  if(e.keyCode==13){
+  	searchPersonResource();
+  }
+ });
+ ajax实例  以json数据传入后台
+ $.ajax({
+					type:"post",
+	    			url:'judgePatientSize.action',
+	    			data:{
+	    				idcardNo:idcardNo
+					},
+					dataType:"json",
+					success:function(data){
+						if(data.size==1){
+							$("#idcardNo").val(data.info.sfzh);
+							$("#sex").val(data.info.sex);
+							$("#patientName").val(data.info.name);
+							$("#age").val(data.info.age);
+							$("#phoneNo").val(data.info.lxdh);
+							$("#address").val(data.info.address);							
+							$("#cardType").val(data.info.cardType);
+							$("#cardNo").val(data.info.cardNo);
+						}else if(data.size==0){
+							showMsg(data.message);
+						}else if(data.size==-1){
+							showMsg(data.message);
+						}else{
+			    			resetform();
+			    		}
+					}
+				});

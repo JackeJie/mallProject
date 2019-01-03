@@ -20,7 +20,6 @@ public class BookController {
 	
 	//查询所有商品
 	@RequestMapping(value="getAll.s")
-	
 	public String getAllBook(Model model) {
 		List<BBookinfo> list=bBookinfoService.getBBookinfoAll();
 		System.out.println(ResponseMessage.returnResponseMessageSucess(0, "成功", list));
