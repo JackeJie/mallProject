@@ -8,11 +8,8 @@
 	<mappers>
 		
 		
-		<mapper resource="com/mallProject/demo/mapper/BBookinfoMapper.xml"/>
-		<mapper resource="com/mallProject/demo/mapper/BManagerMapper.xml"/>
-		<mapper resource="com/mallProject/demo/mapper/BOrderMapper.xml"/>
-		<mapper resource="com/mallProject/demo/mapper/BShoppingcartMapper.xml"/>
-		<mapper resource="com/mallProject/demo/mapper/BUserMapper.xml"/>
+		<mapper resource="com/mallProject/demo/mapper/MmallUserMapper.xml"/>
+	
 		
 		
 	</mappers>

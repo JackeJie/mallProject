@@ -20,7 +20,7 @@
 </head>
 <body>
 	<div>
-		<jsp:include page="/resouce/head.jsp"></jsp:include>
+	 <span>我的购物车:    <i>${sb }</i></span>
 
 	</div>
 	<div class="container">

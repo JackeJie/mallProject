@@ -27,9 +27,23 @@ $(document).ready(function(){
          })
 
          $("#add").on("click",function(){
-        	  var bookid=$("#bookid").val();
+        	  var bookid=$("#bookid").html();
         	  var count=$("#count").val();
-        	  $.post("")
+        	  var booktypeid= $("#booktypeid").html();
+        	  var bookname= $("#bookname").html();
+        	  var bookauthor = $("#bookauthor").html();
+        	  var booknote=  $("#booknote").html();
+        	  var bookmoney=  $("#bookmoney").html();
+        	   if(count==""||count==null){
+        		   count=1;
+        	   }
+        	var sordercount=count;
+        	var  uid="2";//用户id   
+        	var stotalprice=count*bookmoney;//总金额
+        	alert(uid);
+        	  $.post("insertCart.s",{"sordercount ":sordercount,"uid ": uid,"stotalprice ":stotalprice},function(data){
+        		   alert(data.sb);
+        	  })
          });
          
          
@@ -49,11 +63,11 @@ $(document).ready(function(){
 
 			<tr>
 				<th>id</th>
-				<td class="bookid">${BBookinfo.bookid }</td>
+				<td id="bookid">${BBookinfo.bookid }</td>
 			</tr>
 			<tr>
 				<th>类型</th>
-				<td><c:choose>
+				<td id="booktypeid"><c:choose>
 						<c:when test="${BBookinfo.booktypeid==0 }">书籍</c:when>
 						<c:when test="${BBookinfo.booktypeid==1 }">衣服</c:when>
 						<c:when test="${BBookinfo.booktypeid==2 }">零食</c:when>
@@ -65,19 +79,19 @@ $(document).ready(function(){
 			</tr>
 			<tr>
 				<th>书名</th>
-				<td>${BBookinfo.bookname }</td>
+				<td ><span id="bookname">${BBookinfo.bookname }</span></td>
 			</tr>
 			<tr>
 				<th>简介</th>
-				<td>${BBookinfo.bookauthor }</td>
+				<td id="booknote">${BBookinfo.booknote }</td>
 			</tr>
 			<tr>
 				<th>作者</th>
-				<td>${BBookinfo.bookmoney }</td>
+				<td id="bookauthor">${BBookinfo.bookauthor }</td>
 			</tr>
 			<tr>
 				<th>价格</th>
-				<td>${BBookinfo.booknote }</td>
+				<td id="bookmoney">${BBookinfo.bookmoney }</td>
 			</tr>
 			<tr>
 				<th>数量</th>
